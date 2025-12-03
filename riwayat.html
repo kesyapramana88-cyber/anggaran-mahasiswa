@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Riwayat Transaksi</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/riwayat.js" defer></script>
+</head>
+<body>
+  <div class="app">
+    <div class="header">
+      <div class="logo">SB</div>
+      <div>
+        <div class="h1">Riwayat Transaksi</div>
+        <div class="small">Cari, filter, dan kelola transaksi</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div style="display:flex;gap:8px">
+        <input id="search" class="input" placeholder="Cari catatan atau nominal">
+        <select id="filterJenis" class="input">
+          <option value="all">Semua</option>
+          <option value="income">Pemasukan</option>
+          <option value="expense">Pengeluaran</option>
+        </select>
+        <select id="filterKategori" class="input"></select>
+      </div>
+
+      <div id="listContainer" style="margin-top:12px"></div>
+    </div>
+
+  </div>
+</body>
+</html>

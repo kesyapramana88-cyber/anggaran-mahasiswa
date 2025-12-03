@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tambah Transaksi</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/tambah.js" defer></script>
+</head>
+<body>
+  <div class="app">
+    <div class="header">
+      <div class="logo">SB</div>
+      <div>
+        <div class="h1">Tambah Transaksi</div>
+        <div class="small">Form cepat dengan saran kategori otomatis</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <form id="formTransaksi">
+        <div class="form-row">
+          <label class="small">Jenis</label>
+          <select id="jenis" class="input">
+            <option value="expense">Pengeluaran</option>
+            <option value="income">Pemasukan</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <label class="small">Kategori (atau pilih saran)</label>
+          <select id="kategori" class="input"></select>
+        </div>
+
+        <div class="form-row">
+          <label class="small">Jumlah (Rp)</label>
+          <input id="jumlah" class="input" type="number" placeholder="50000" required>
+        </div>
+
+        <div class="form-row">
+          <label class="small">Catatan (misal: makan siang di kantin)</label>
+          <input id="catatan" class="input" type="text" placeholder="Catatan singkat">
+          <div class="kv" style="margin-top:6px">Saran kategori: <span id="suggestion" class="kv">-</span></div>
+        </div>
+
+        <div style="display:flex;gap:8px;margin-top:8px">
+          <button class="btn" id="saveBtn" type="submit">Simpan</button>
+          <a class="btn" href="index.html" style="background:transparent;color:var(--accent);border:1px solid rgba(255,255,255,0.04)">Batal</a>
+        </div>
+      </form>
+    </div>
+
+    <div class="footer-note">Saran kategori didasarkan pada kata kunci di catatan transaksi.</div>
+  </div>
+</body>
+</html>

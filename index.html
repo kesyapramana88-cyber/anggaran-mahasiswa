@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Student Budget Manager - Aesthetic</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+<script src="js/app.js" defer></script>
+</head>
+<body>
+  <div class="app">
+    <div class="header">
+      <div class="logo">SB</div>
+      <div>
+        <div class="h1">Student Budget Manager</div>
+        <div class="small">Kelola uang saku & catat transaksi dengan mudah</div>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div>
+        <div class="card">
+          <div class="small">Saldo Saat Ini</div>
+          <div class="balance" id="saldo">Rp 0</div>
+          <div class="row controls">
+            <div class="kv">Pemasukan bulan ini: <strong id="total-masuk">Rp 0</strong></div>
+            <div class="kv">Pengeluaran: <strong id="total-keluar">Rp 0</strong></div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:16px">
+          <div class="small">Transaksi Terbaru</div>
+          <div class="list" id="recentList"></div>
+        </div>
+
+      </div>
+
+      <div>
+        <div class="card">
+          <div class="small">Pengeluaran per Kategori</div>
+          <canvas id="pieChart" style="max-height:260px;margin-top:12px"></canvas>
+        </div>
+
+        <div class="card" style="margin-top:16px">
+          <div class="small">Kategori</div>
+          <div id="catList" class="list"></div>
+          <div style="margin-top:12px">
+            <a class="btn" href="tambah.html">Tambah Transaksi</a>
+            <a class="btn" href="kategori.html" style="margin-left:8px">Kelola Kategori</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-note">Data tersimpan di browser. Untuk tugas, silakan upload ke GitHub Pages atau Netlify.</div>
+  </div>
+
+  <a class="fab" href="tambah.html">+</a>
+</body>
+</html>
