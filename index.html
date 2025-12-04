@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Student Budget Manager — Complete</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Student Budget Manager</h1>
+    <div id="userArea"></div>
+  </header>
+
+  <main class="container">
+    <section class="box" id="authBox">
+      <h2>Login / Register</h2>
+      <input id="username" placeholder="Masukkan nama pengguna"/>
+      <button id="btnLogin">Masuk / Daftar</button>
+    </section>
+
+    <section class="box" id="appBox" style="display:none;">
+      <div class="row">
+        <div class="card">
+          <h3>Tambah Pemasukan</h3>
+          <input id="incomeDesc" placeholder="Deskripsi (Gaji, Beasiswa)"/>
+          <input id="incomeAmount" type="number" placeholder="Nominal"/>
+          <button onclick="addIncome()">Tambah Pemasukan</button>
+        </div>
+
+        <div class="card">
+          <h3>Tambah Pengeluaran</h3>
+          <input id="expenseDesc" placeholder="Deskripsi (Makan, Transport)"/>
+          <input id="expenseAmount" type="number" placeholder="Nominal"/>
+          <button onclick="addExpense()">Tambah Pengeluaran</button>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="card wide">
+          <h3>Dashboard</h3>
+          <div class="stats">
+            <div class="stat">Pemasukan: <span id="statIncome">0</span></div>
+            <div class="stat">Pengeluaran: <span id="statExpense">0</span></div>
+            <div class="stat">Saldo: <span id="statBalance">0</span></div>
+          </div>
+
+          <div class="chart-wrap">
+            <canvas id="monthlyChart" height="120"></canvas>
+          </div>
+
+          <div class="analysis">
+            <button onclick="checkSpending()">Cek Pengeluaran Hari Ini</button>
+            <div id="analysisText"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="card wide">
+          <h3>Riwayat Transaksi</h3>
+          <div id="history"></div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="card">
+          <button id="exportBtn">Export JSON</button>
+        </div>
+        <div class="card">
+          <button id="logoutBtn">Logout</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <small>Student Budget Manager — Offline Web App ● Data tersimpan di browser</small>
+  </footer>
+
+<script src="script.js"></script>
+</body>
+</html>
